@@ -20,10 +20,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/content_main" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -34,11 +30,17 @@
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="264dp"
-        android:layout_height="176dp"
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_anchor="@+id/include"
         app:layout_anchorGravity="center"
+        app:srcCompat="@drawable/sos" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="541dp"
         app:srcCompat="@drawable/SOS" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
