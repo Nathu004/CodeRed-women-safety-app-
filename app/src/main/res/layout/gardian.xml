@@ -5,46 +5,80 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F0F0"
-    android:backgroundTint="#F1F0F0"
-    tools:context=".SOS">
+    tools:context=".Gardianupdate">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@android:color/holo_red_dark"
-        app:popupTheme="@style/Theme.Womensafetyapp.PopupOverlay" />
-
-
-    <ImageButton
-        android:id="@+id/sosButton"
-        android:layout_width="263dp"
-        android:layout_height="241dp"
-        android:layout_marginTop="184dp"
-        android:background="#F1F0F0"
-        android:backgroundTint="#F1F0F0"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Guardian Update"
+        android:textColor="#FB0000"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.429"
-        app:srcCompat="@drawable/s" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-    <ImageButton
-        android:id="@+id/call"
-        android:layout_width="85dp"
-        android:layout_height="83dp"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="416dp"
+        android:layout_height="611dp"
         android:background="#F1F0F0"
-        android:backgroundTint="#F1F0F0"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-        app:layout_constraintTop_toBottomOf="@+id/sosButton"
-        app:layout_constraintVertical_bias="0.526"
-        app:srcCompat="@drawable/p" />
+        <EditText
+            android:id="@+id/txt_gname"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/edittext"
+            android:ems="10"
+            android:hint="Gardian Name"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:textColorHint="#8E8D8D"
+            />
+
+        <EditText
+            android:id="@+id/txt_gnum"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/edittext"
+            android:ems="10"
+            android:hint="Guardian Mobile Number"
+            android:inputType="phone"
+            android:paddingStart="20dp"
+            android:textColorHint="#8E8D8D" />
+
+        <Button
+            android:id="@+id/btn_done"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+
+            android:background="@drawable/btn_sinup"
+            android:text="Update"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:layout_marginBottom="8dp" />
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView5"
@@ -53,12 +87,11 @@
         android:background="#FEFAFA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
         app:layout_constraintVertical_bias="1.0" />
-
     <ImageButton
         android:id="@+id/home_btn"
         android:layout_width="38dp"
@@ -71,7 +104,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView5"
         app:srcCompat="@drawable/home" />
-
     <ImageButton
         android:id="@+id/police_btn"
         android:layout_width="38dp"
@@ -150,19 +182,6 @@
         android:focusable="false"/>
 
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="112dp"
-        android:layout_height="12dp"
-        android:inputType="none"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/sosButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.436" />
-
     <ImageButton
         android:id="@+id/gaur_btn"
         android:layout_width="44dp"
@@ -192,5 +211,6 @@
         app:layout_constraintStart_toStartOf="@+id/gaur_btn"
         app:layout_constraintTop_toTopOf="@+id/gaur_btn"
         android:focusable="false"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

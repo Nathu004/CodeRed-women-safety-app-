@@ -33,5 +33,22 @@ public class Intro extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        /*
+        Firebase.setAndroidContext(this);
+        Firebase ref = new Firebase(Passwords.FB_LINK).child("users");
+        AuthData currentUser = ref.getAuth();
+        if (currentUser == null) {
+
+        }
+        else {
+            // User already logged in
+            Intent intent = new Intent(this, SOS.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
+
+         */
     }
 }

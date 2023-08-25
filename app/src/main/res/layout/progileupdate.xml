@@ -2,49 +2,116 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_done"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F0F0"
-    android:backgroundTint="#F1F0F0"
-    tools:context=".SOS">
+    tools:context=".Profileview">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@android:color/holo_red_dark"
-        app:popupTheme="@style/Theme.Womensafetyapp.PopupOverlay" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Profile"
+        android:textColor="#FB0000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-    <ImageButton
-        android:id="@+id/sosButton"
-        android:layout_width="263dp"
-        android:layout_height="241dp"
-        android:layout_marginTop="184dp"
-        android:background="#F1F0F0"
-        android:backgroundTint="#F1F0F0"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+    <LinearLayout
+        android:layout_width="398dp"
+        android:layout_height="562dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.429"
-        app:srcCompat="@drawable/s" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
+        <EditText
+            android:id="@+id/txtuname"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/edittext"
+            android:ems="10"
+            android:hint="UserName"
+            android:inputType="text"
+            android:paddingStart="20dp"
+            android:textColorHint="#8E8D8D"
+            android:focusable="false"/>
 
-    <ImageButton
-        android:id="@+id/call"
-        android:layout_width="85dp"
-        android:layout_height="83dp"
-        android:background="#F1F0F0"
-        android:backgroundTint="#F1F0F0"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        <EditText
+            android:id="@+id/txtemail"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/edittext"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="20dp"
+            android:textColorHint="#8E8D8D"
+            android:focusable="false"/>
 
-        app:layout_constraintTop_toBottomOf="@+id/sosButton"
-        app:layout_constraintVertical_bias="0.526"
-        app:srcCompat="@drawable/p" />
+        <EditText
+            android:id="@+id/txtpsw"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/edittext"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:textColorHint="#8E8D8D"
+            android:focusable="false"/>
+
+        <EditText
+            android:id="@+id/txtaddr"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/edittext"
+            android:ems="10"
+            android:hint="Address"
+            android:inputType="text"
+            android:paddingStart="20dp"
+            android:textColorHint="#8E8D8D"
+            android:focusable="false" />
+
+        <Button
+            android:id="@+id/btn_signup"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+
+            android:background="@drawable/btn_sinup"
+            android:text="Done"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFEB3B"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:layout_marginBottom="8dp" />
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView5"
@@ -53,7 +120,7 @@
         android:background="#FEFAFA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
@@ -96,7 +163,8 @@
         app:layout_constraintHorizontal_bias="0.957"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:srcCompat="@drawable/profile" />
+        app:srcCompat="@drawable/profile"
+        android:focusable="false"/>
 
     <EditText
         android:id="@+id/editTextText"
@@ -150,19 +218,6 @@
         android:focusable="false"/>
 
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="112dp"
-        android:layout_height="12dp"
-        android:inputType="none"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/sosButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.436" />
-
     <ImageButton
         android:id="@+id/gaur_btn"
         android:layout_width="44dp"
@@ -192,5 +247,6 @@
         app:layout_constraintStart_toStartOf="@+id/gaur_btn"
         app:layout_constraintTop_toTopOf="@+id/gaur_btn"
         android:focusable="false"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
